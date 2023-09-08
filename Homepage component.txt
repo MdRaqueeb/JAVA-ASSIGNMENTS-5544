@@ -1,0 +1,277 @@
+#homepage.component.html
+-->(Includes both CSS & Html formats)
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <!-- Include Bootstrap CSS (for styling) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles */
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar-dark .navbar-brand,
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Custom Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Custom Book Styles */
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .book {
+            width: 19%;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .book-image {
+            max-width: 100px;
+            max-height: 150px;
+            margin: 0 auto 10px;
+        }
+
+        .book-title {
+            font-weight: bold;
+        }
+
+        .book-price {
+            color: #007bff;
+        }
+
+        .add-to-cart-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <h3>Kiran Book Store</h3>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Category</a>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="#">Fiction</a>
+                        <a class="dropdown-item" href="#">Art</a>
+                        <a class="dropdown-item" href="#">Science</a>
+                        <a class="dropdown-item" href="#">Horror</a>
+                        <a class="dropdown-item" href="#">Travel</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Cart
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        My Orders
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Log-Out</a>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="#">Log Out</a>
+                        <a class="dropdown-item" href="#">New Registration</a>
+                    </div>
+                </li>
+            </ul>
+
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 align="center">A wide range of Books To explore....!!</h2><br>
+
+        <!-- Display Books for a Category -->
+        <div class="book-container">
+            <!-- Book 1 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.LWX54UcVA8GUFTFtzr6KdwHaLM?w=203&h=307&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 1" class="book-image"><br>
+                <span class="book-category">(Fiction)</span><br>
+                <span class="book-title">Catching Fire</span><br>
+                <span class="book-price">Rs.1500.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.BYHbxeI77KBWmLOSrP0QgQAAAA?w=190&h=287&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 2" class="book-image"><br>
+                <span class="book-category">(Art)</span><br>
+                <span class="book-title">The Master Piece</span><br>
+                <span class="book-price">Rs.1700.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.1G6f4MrYV9u61SF9i6kk0QHaLH?w=204&h=306&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 3" class="book-image"><br>
+                <span class="book-category">(Science)</span><br>
+                <span class="book-title">Interstellar</span><br>
+                <span class="book-price">Rs.2015.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.FM6y3O8k2igajktzi4igMQHaLb?w=201&h=310&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 4" class="book-image"><br>
+                <span class="book-category">(Horror)</span><br>
+                <span class="book-title">The Conjuring</span><br>
+                <span class="book-price">Rs.3000.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.RpliCOPd-n0THbznEJ9puQAAAA?w=204&h=291&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 5" class="book-image"><br>
+                <span class="book-category">(Travel)</span><br>
+                <span class="book-title">The Travel Book</span><br>
+                <span class="book-price">Rs.3500.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.lKiJqs0JrTrKlb9nv3yPdQHaLG?w=204&h=306&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 6" class="book-image"><br>
+                <span class="book-category">(Fiction)</span><br>
+                <span class="book-title">The Maze Runner</span><br>
+                <span class="book-price">Rs.1500.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 7 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.MwhPx4xKfVdwr_tf_YRDfAAAAA?w=115&h=180&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 8" class="book-image"><br>
+                <span class="book-category">(Art)</span><br>
+                <span class="book-title">The Art of Rivalry</span><br>
+                <span class="book-price">Rs.1700.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 8 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.q-ns5gnryakOXu4IOeS9pgHaLW?w=201&h=309&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 8" class="book-image"><br>
+                <span class="book-category">(Science)</span><br>
+                <span class="book-title">American Prometheus</span><br>
+                <span class="book-price">Rs.2015.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 9 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.dZtOxWVelqQsO8fW1jFhDwHaMT?w=193&h=322&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 9" class="book-image"><br>
+                <span class="book-category">(Horror)</span><br>
+                <span class="book-title">Pet Sematary</span><br>
+                <span class="book-price">Rs.3000.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+
+            <!-- Book 10 -->
+            <div class="book">
+                <img src="https://th.bing.com/th/id/OIP.43J271zD30GOjTxfIow_ngHaLV?w=202&h=309&c=7&r=0&o=5&pid=1.7"
+                    alt="Book 10" class="book-image"><br>
+                <span class="book-category">(Travel)</span><br>
+                <span class="book-title">The Holiday</span><br>
+                <span class="book-price">Rs.3500.99 /-</span><br>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div><br>
+        <h3 align="center">Many Choices....!! Choose Wisely...!!</h3>
+    </div><br>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 Vathsa Enterprises
+    </footer>
+
+    <!-- Include Bootstrap CSS (for styling, no JS or jQuery) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</body>
+
+</html>
+
