@@ -1,0 +1,137 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+ 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+ 
+
+ 
+
+<div class="container">
+
+    <br>
+
+    <div class="card bg-light">
+
+        <article class="card-body mx-auto" style="max-width: 400px;">
+
+            <h3 class="card-title mt-3 text-center">Admin Registration</h3>
+
+            <p class="text-center">Getting started with your account</p>
+
+            <form>
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+
+                    </div>
+
+                    <input name="" class="form-control" placeholder="Full Name" #txt1 type="text">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+
+                    </div>
+
+                    <input name="" class="form-control" placeholder="Email ddress" #txt2 type="email">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+
+                    </div>
+
+                    <input class="form-control" placeholder="Create Password" #txt3 type="password">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+
+                    </div>
+
+                    <input name="" class="form-control" placeholder="Phone Number" #txt4 type="text">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+
+                    </div>
+
+                    <input name="" class="form-control" placeholder="PASS-CODE" type="text">
+
+                </div> <!-- form-group end.// -->
+
+                <div class="form-group">
+
+                    <button type="submit" class="btn btn-primary btn-block" (click)="onsubmit(txt1.value,txt2.value,txt3.value,txt4.value)"> Create Account </button>
+
+                </div> <!-- form-group// -->
+
+                <p class="text-center">Already had an account? <a href="adminlogin">LogIn Here</a> </p>
+
+            </form>
+
+        </article>
+
+    </div> 
+    <!-- card.// -->
+
+ 
+
+</div>
+
+<!--container end.//-->
+
+<!-- <form action=""  method="post">
+
+    <label for="user">Username</label>
+
+    <input id="user" type="text" name="name" #txt1 placeholder="name"><br>
+
+
+    <label for="email">Email</label>
+
+    <input id="email" type="text" name="email" #txt2 placeholder="email"><br>
+
+
+    <label for="password">Password</label>
+
+    <input id="password" type="password" name="password" #txt3  placeholder="password"><br>
+
+
+    <label for="mobile">MobileNumber</label>
+
+    <input id="mobile" type="number" name="mobile" #txt4 placeholder="mobile"><br>
+
+
+    <input type="submit" value="submit" (click)="onsubmit(txt1.value,txt2.value,txt3.value,txt4.value)">
+
+ 
+</form> -->

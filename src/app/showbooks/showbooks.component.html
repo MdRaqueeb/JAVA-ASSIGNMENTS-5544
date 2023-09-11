@@ -1,0 +1,259 @@
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <p class="navbar-brand" href="">Book Store</p>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="books">Show All Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cart</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search"  #txt1 aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="showBooksByTitle(txt1.value)">Search</button>
+    </form>
+  </div>
+</nav> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <!-- Include Bootstrap CSS (for styling) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles */
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar-dark .navbar-brand,
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Custom Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Custom Book Styles */
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .book {
+            width: 19%;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .book-image {
+            max-width: 100px;
+            max-height: 150px;
+            margin: 0 auto 10px;
+        }
+
+        .book-title {
+            font-weight: bold;
+        }
+
+        .book-price {
+            color: #007bff;
+        }
+
+        .add-to-cart-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <h3>Kiran Book Store</h3>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Category</a>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="#">Fiction</a>
+                        <a class="dropdown-item" href="#">Art</a>
+                        <a class="dropdown-item" href="#">Science</a>
+                        <a class="dropdown-item" href="#">Horror</a>
+                        <a class="dropdown-item" href="#">Biography</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Cart
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        My Orders
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Log-Out</a>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="login">Log Out</a>
+                        <a class="dropdown-item" href="register">New Registration</a>
+                    </div>
+                </li>
+            </ul>
+
+
+
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 align="center">A wide range of Books To explore....!!</h2><br>
+
+
+
+        <!-- Display Books for a Category -->
+        <div class="book-container">
+            <!-- Book 1 -->
+            <div class="book" *ngFor="let b of books" >
+                <img src="https://th.bing.com/th/id/OIP.LWX54UcVA8GUFTFtzr6KdwHaLM?w=203&h=307&c=7&r=0&o=5&pid=1.7" alt="Book 1"
+                    class="book-image"><br>
+                <span class="book-title">Title: {{b.title}}</span><br>
+                <span class="book-author">Author: {{b.authorId.authorName}}</span><br>
+                <span class="book-publisher">Publisher: {{b.publisherId.publisherName}}</span><br>
+                <span class="book-category">Category: {{b.category}}</span><br>
+                <span class="book-price">Price: {{b.price}}</span><br>
+                <button class="add-to-cart-button" (click)="addTocart(b.bookID,b.price)">Add to Cart</button>
+            </div>
+
+        </div><br>
+        <h3 align="center">Many Choices....!! Choose Wisely...!!</h3>
+    </div><br>
+
+
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 Vathsa Enterprises
+    </footer>
+
+
+
+    <!-- Include Bootstrap CSS (for styling, no JS or jQuery) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</body>
+
+
+
+</html>
+
+<!-- <table align="center" border="1" width="70%" bgcolor="lightBlue">
+  <tr>
+      <th>Book Title</th>
+      <th>Book Author</th>
+      <th>Book Publisher</th>
+      <th>Book Category</th>
+      <th>Book Price</th>
+      <th>Add to Cart</th>
+  </tr>
+
+  <tr *ngFor="let b of books" >
+    
+          <td>{{b.title}}</td>
+          <td>{{b.authorId.authorName}}</td>
+          <td>{{b.publisherId.publisherName}}</td>
+          <td>{{b.category}}</td>
+          <td>{{b.price}}</td>
+          <td><button (click)="addTocart(b.bookID,b.price)">Add</button></td>
+  </tr>
+
+</table> -->

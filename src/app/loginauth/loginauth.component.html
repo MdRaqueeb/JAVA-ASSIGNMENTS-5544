@@ -1,0 +1,155 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+ 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<body>
+<p style="background-image: url(https://th.bing.com/th/id/R.b78639182048dec2e2e9e9b609716b91?rik=pwJe%2bDjXBtQCYQ&riu=http%3a%2f%2fprintablegraphics.in%2fwp-content%2fuploads%2f2018%2f01%2fHtml-background-image.jpg&ehk=CsYXoBIMZX%2fVmcu%2fpE8%2fpXsvklB9KzeoOlduB6co9Mc%3d&risl=&pid=ImgRaw&r=0);"></p>
+<div class="container">
+        
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <div class="card bg-light">
+       
+        <article class="card-body mx-auto" style="max-width: 400px;">
+
+            <h3 class="card-title mt-3 text-center">Customer Registration</h3>
+
+            <p class="text-center">Getting started with your free account</p>
+            
+            <form>
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+
+                    </div>
+
+                    <input name="Name" class="form-control" placeholder="Full Name" #txt1 type="text">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+
+                    </div>
+
+                    <input name="email" class="form-control" placeholder="Email ID" #txt2 type="email">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+
+                    </div>
+
+                    <input name="password" class="form-control" placeholder="Create Password" #txt3 type="password">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+
+                    </div>
+
+                    <input name="mobile" class="form-control" placeholder="Mobile Number" #txt4 type="text">
+
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+
+                    </div>
+
+                    <input name="gender" class="form-control" placeholder="Gender" #txt5 type="text">
+
+                </div>
+
+                <div class="form-group input-group">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+
+                    </div>
+
+                    <input name="address" class="form-control" placeholder="Address" #txt6 type="text">
+
+                </div> <!-- form-group end.// -->
+
+                <div class="form-group">
+
+                    <button type="submit" class="btn btn-primary btn-block" (click)="onsubmit(txt1.value,txt2.value,txt3.value,txt4.value,txt5.value,txt6.value)"> Create Account </button>
+
+                </div> <!-- form-group// -->
+
+                <p class="text-center">Already had an account? <a href="login">Log In</a> </p>
+
+            </form>
+
+        </article>
+
+    </div> <!-- card.// -->
+
+ 
+
+</div>
+</body>
+
+<!--container end.//-->
+
+
+<!-- <form action=""  method="post">
+
+    <label for="user">Username</label>
+    <input id="user" type="text" name="name" #txt1 placeholder="name"><br>
+
+    <label for="email">Email</label>
+    <input id="email" type="text" name="email" #txt2 placeholder="email"><br>
+
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" #txt3  placeholder="password"><br>
+
+    <label for="mobile">MobileNumber</label>
+    <input id="mobile" type="number" name="mobile" #txt4 placeholder="mobile"><br>
+
+    <label for="gender">Gender</label>
+    <input id="gender" type="text" name="gender" #txt5 placeholder="M/F"><br>
+
+    <label for="address">Address</label>
+    <input id="address" type="text" name="address" #txt6 placeholder="address"><br>
+
+    <input type="submit" value="submit" (click)="onsubmit(txt1.value,txt2.value,txt3.value,txt4.value,txt5.value,txt6.value)">
+
+
+</form> -->
